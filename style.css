@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 90%;
+    width: 80%;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.container h1 {
+    font-family: "Apple Chancery", cursive, sans-serif;
+    height: auto;
+    width: 90%;
+    font-size: 45px;
+    text-align: center;
+    border: 2px solid black;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 10px;
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+}
+
+.container .generated-pwd {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container .generated-pwd input {
+    height: 23px;
+    width: 88%;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    font-family: "Courier New", monospace;
+    font-weight: 1000;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.container .generated-pwd button {
+    position: absolute;
+    left: 90%;
+    border: none;
+    background-color: white;
+}
+
+.container .generated-pwd button:hover {
+    cursor: pointer;
+}
+
+#copy-msg {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease, bottom 0.5s ease;
+}
+
+#copy-msg.active {
+    display: block;
+    bottom: 25px;
+    opacity: 1;
+}
+
+/* Adding a small triangle pointing toward copy button */
+#copy-msg:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.container .pwd-condition-options {
+    height: auto;
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container .pwd-condition-options .pwd-length {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .pwd-condition-options .pwd-length p {
+    font-size: 24px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+.container .pwd-condition-options .pwd-slider {
+    height: auto;
+    width: 100%;
+}
+
+.container .pwd-condition-options .pwd-slider input {
+    height: auto;
+    width: 100%;
+}
+
+.container .pwd-condition-options .pwd-slider input:hover {
+    cursor: pointer;
+}
+
+.container .pwd-condition-options .pwd-conditions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Custom Checkbox Styles */
+.pwd-conditions label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.pwd-conditions input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.pwd-conditions .custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+}
+
+.pwd-conditions label:hover input ~ .custom-checkbox {
+    background-color: #ccc;
+}
+
+.pwd-conditions input:checked ~ .custom-checkbox {
+    background-color: #2196F3;
+    border-color: #2196F3;
+}
+
+.pwd-conditions .custom-checkbox:after {
+    content: "✓";
+    position: absolute;
+    display: none;
+    color: white;
+    font-size: 16px;
+    top: -2px;
+    left: 3px;
+}
+
+.pwd-conditions input:checked ~ .custom-checkbox:after {
+    display: block;
+}
+
+.container .pwd-condition-options .pwd-strength {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .pwd-condition-options .pwd-strength p {
+    font-size: 23px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+.container .pwd-condition-options .pwd-strength div {
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+.container .pwd-condition-options button {
+    height: 30px;
+    width: 100%;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    background-color: rgba(0, 0, 255, 0.564);
+}
+
+.container .pwd-condition-options button:hover {
+    cursor: pointer;
+}
