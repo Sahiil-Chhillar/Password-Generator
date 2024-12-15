@@ -54,10 +54,38 @@ This password generator tool lets users generate random, secure passwords with c
 5. The generated password will be displayed in the text box.
 6. Click the "Copy" button to copy the password to your clipboard. A confirmation message will appear.
 
-Example:
-```html
-<script src="index.js"></script>
-```
+### Usage Example
+
+This Password Generator project allows you to generate strong and secure passwords based on your selected preferences (uppercase, lowercase, numbers, symbols, and password length). Follow the steps below to use the app:
+
+#### Steps to Use the Application
+
+1. **Open the Application**: Launch the project in your browser (after downloading or cloning the repository and opening the `index.html` file).
+
+2. **Adjust Password Length**: Use the slider to select your desired password length (between 1 and 20 characters).
+
+3. **Select Criteria**: Check the boxes to include:
+    - Uppercase letters
+    - Lowercase letters
+    - Numbers
+    - Symbols
+
+4. **Generate Password**: Click the "GENERATE PASSWORD" button to generate a password that meets the selected criteria.
+
+5. **Copy the Password**: Once the password is displayed, click the "Copy" button to copy the password to your clipboard.
+
+6. **Password Strength Indicator**: The color of the circle will indicate the strength of the generated password:
+    - **Green**: Strong
+    - **Yellow**: Medium
+    - **Red**: Weak
+
+#### Example Output
+
+- **Password Length**: 12 characters
+- **Criteria**: Uppercase, Lowercase, Numbers, Symbols
+- **Generated Password**: `7fP$u1T@z9M#`
+
+Feel free to adjust the criteria and regenerate the password until you get the one that suits your needs!
 
 ## Contributing
 
