@@ -163,3 +163,10 @@ generateBtn.addEventListener('click', () => {
 
     calStrength();
 });
+
+
+function hello(){
+    for(int i = 0; i < 100;i++){} 
+};
+
+hello();
